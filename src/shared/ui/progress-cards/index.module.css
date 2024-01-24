@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.item {
+  border: 1px solid black;
+  width: 24px;
+  height: 24px;
+}
+
+.item_answered {
+  background-color: brown;
+}
+
+.item_answered.item_correct {
+  background-color: green;
+}
+
+.item_active {
+    border: 1px solid white;
+}

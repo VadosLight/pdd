@@ -1,0 +1,30 @@
+.card {
+    position: relative;
+    width: 500px;
+    min-height: 500px;
+    background-color: rgb(61, 124, 180);
+}
+
+.img {
+    position: relative;
+    width: 100%;
+}
+
+.answers {
+    box-sizing: border-box;
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+}
+
+.btn_answered {
+    background-color: brown;
+}
+
+.btn_answered.btn_correct {
+    background-color: green;
+}
+
+.tip {
+    
+}
