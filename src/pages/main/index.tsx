@@ -1,5 +1,6 @@
 import { useGetAllTickets } from "entity/api/hooks/ticket";
 import { useNavigate } from "react-router-dom";
+import { Ticket } from "shared/ui/ticket";
 
 export const MainPage = () => {
   const { data = [] } = useGetAllTickets();
@@ -8,17 +9,22 @@ export const MainPage = () => {
   return (
     <div>
       Выберите билет
-      <ul>
+      <ul
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gap: "1rem",
+        }}
+      >
         {data.map((item) => {
           return (
-            <li
+            <Ticket
+              name={item.name}
               key={item.id}
               onClick={() => {
                 nav(`/testing/${item.id}`);
               }}
-            >
-              {item.name}
-            </li>
+            />
           );
         })}
       </ul>
